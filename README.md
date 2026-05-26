@@ -34,3 +34,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Installing NPM Packages 
+
+npm i @mui/material @emotion/react @emotion/styled @mui/x-data-grid lucide-react numeral date-fns axios recharts react-dnd react-dnd-html5-backend gantt-task-react
+
+## Installing Typescript NPM Packages
+
+npm i -D @types/node @types/uuid @types/numeral
+
+## Installing Prettier plugin (It automatically sorts the tailwind classes)
+
+npm i -D prettier prettier-plugin-tailwindcss
+
+Then create .prettierrc file
+
+## Installing tailwind-merge to merge certain classes for tailwind
+
+npm i -D tailwind-merge
+
+## Create darkMode property in tailwind.config.ts file
+darkMode: "class",
+
+## Create colors property in extend in tailwind.config.ts file
+colors: {
+    
+}
+
+Create dashboardWrapper.tsx file inside src/app folder
+
+
+
+
+
