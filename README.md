@@ -98,4 +98,11 @@ Wrap DashboardLayout with StoreProvider which is from redux.tsx
 
 Now we can use redux state inside DashboardWrapper
 
+Define isSidebarCollaped and isDarkmode by useAppSelector in DashboardWrapper.
+Now we have access to these states.
+
+
+
+
+
 
