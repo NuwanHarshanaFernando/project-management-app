@@ -90,8 +90,12 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
 
 Create api.ts inside state directory
 
+## Link Redux with Nextjs application
 
+Change DashboardWrapper to DashboardLayout and create a second Component called DashboardWrapper
 
+Wrap DashboardLayout with StoreProvider which is from redux.tsx
 
+Now we can use redux state inside DashboardWrapper
 
 
