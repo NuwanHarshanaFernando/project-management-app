@@ -77,10 +77,18 @@ Copy and paste redux toolkit store with redux persist
 ## Handling the global reducer
 
 Create state folder inside src directory
-Create index.tsx file inside the created state folder
+Create index.ts file inside the created state folder
 Setup redux js toolkit in index.tsx file
 
 Create state for 1-> light mode and dark mode, 2-> sidebarCollpsed or not
+
+## Handling API calls
+
+Create .env.local file inside client directory
+
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
+
+Create api.ts inside state directory
 
 
 
