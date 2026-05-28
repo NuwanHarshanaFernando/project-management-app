@@ -64,6 +64,16 @@ colors: {
 
 Create dashboardWrapper.tsx file inside src/app folder
 
+Create Navbar and Sidebar inside (components) folder in src/app folder
+
+## Installing redux toolkit
+
+npm i react-redux @reduxjs/toolkit redux-persist dotenv
+
+Create redux.tsx file inside src/app folder
+
+Copy and paste redux toolkit store with redux persist
+
 
 
 
