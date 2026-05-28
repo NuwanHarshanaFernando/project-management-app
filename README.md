@@ -80,6 +80,8 @@ Create state folder inside src directory
 Create index.tsx file inside the created state folder
 Setup redux js toolkit in index.tsx file
 
+Create state for 1-> light mode and dark mode, 2-> sidebarCollpsed or not
+
 
 
 
