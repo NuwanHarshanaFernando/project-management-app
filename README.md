@@ -74,6 +74,13 @@ Create redux.tsx file inside src/app folder
 
 Copy and paste redux toolkit store with redux persist
 
+## Handling the global reducer
+
+Create state folder inside src directory
+Create index.tsx file inside the created state folder
+Setup redux js toolkit in index.tsx file
+
+
 
 
 
