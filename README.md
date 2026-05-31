@@ -106,6 +106,13 @@ Now we have access to these states.
 Open Navbar -> index.tsx
 dispatch by useAppDispatch() in Navbar
 
+Changing state from lightMode to darkMode and vice versa by dispatching by the button in Navbar
+
+## Change states from Sidebar
+
+Create SidebarLink component in Sidebar/index.tsx
+
+
 
 
 
