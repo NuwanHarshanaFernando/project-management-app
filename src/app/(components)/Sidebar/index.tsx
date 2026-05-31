@@ -1,7 +1,8 @@
 "use client";
 
 import { useAppDispatch, useAppSelector } from '@/app/redux';
-import { Home, Icon, LockIcon, LucideIcon } from 'lucide-react';
+import { setIsSidebarCollapsed } from '@/state';
+import { Home, Icon, LockIcon, LucideIcon, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -11,8 +12,14 @@ const Sidebar = () => {
   const [showProjects, setShowProjects] = useState(true);
   const [showPriority, setShowPriority] = useState(true);
 
+   const dispatch = useAppDispatch();
+   const isSidebarCollaped = useAppSelector(
+    (state) => state.global.isSidebarCollapsed
+    );
+
   const sidebarClassNames = `fixed flex flex-col h-[100%] justify-between shadow-xl
-  transition-all duration-300 h-full z-40 dark:bg-black overflow-y-auto bg-white w-64 `;
+  transition-all duration-300 h-full z-40 dark:bg-black overflow-y-auto bg-white
+  ${isSidebarCollaped ? "w-0 hidden" : "w-64"}`;
 
   return (
     <div className={sidebarClassNames}>
@@ -22,6 +29,11 @@ const Sidebar = () => {
                 <div className='text-xl font-bold text-gray-800 dark:text-white'> 
                     NHFLIST
                 </div>
+                {isSidebarCollaped ? null : (
+                    <button className='py-3' onClick={() => {dispatch(setIsSidebarCollapsed(!isSidebarCollaped))}}>
+                        <X className='h-6 w-6 text-gray-800 hover:text-gray-500 dark:text-white'/>
+                    </button>
+                )}
             </div>
             {/* TEAM */}
             <div className='flex items-center gap-5 border-y-[1.5px] border-gray-200 px-8 py-4 dark:border-gray-700'>
@@ -49,30 +61,22 @@ interface SidebarLinkProps {
     href: string;
     icon: LucideIcon;
     label: string;
-    // isCollapsed: boolean;
 }
 
         const SidebarLink = ({
             href,
             icon: Icon,
-            label,
-          //  isCollapsed
+            label
         }: SidebarLinkProps) => {
             const pathname = usePathname();
             const isActive = pathname === href || (pathname === "/" && href === "/dashboard");
-            const screenWidth = window.innerWidth;
-        
-            const dispatch = useAppDispatch();
-            const isSidebarCollaped = useAppSelector(
-                (state) => state.global.isSidebarCollapsed
-            );
-
+            
             return (
                 <Link href={href} className="w-full">
                     <div className={`relative flex cursor-pointer items-center gap-3 transition-colors
                         hover:bg-gray-100 dark:bg-black dark:hover:bg-gray-700 ${
                             isActive ? "bg-gray-100 text-white dark:bg-gray-600" : ""
-                        } `}>
+                        } justify-start px-8 py-3`}>
 
                         {isActive && (
                             <div className='absolute left-0 top-0 h-[100%] w-[5px] bg-blue-200'></div>

@@ -112,7 +112,7 @@ Changing state from lightMode to darkMode and vice versa by dispatching by the b
 
 Create SidebarLink component in Sidebar/index.tsx
 
-
+Add styles when Sidebar Collaped and Opened
 
 
 
