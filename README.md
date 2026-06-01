@@ -297,6 +297,18 @@ Create interface Task as in taskController.ts in backend
 
 Create enum Status and enum Priority
 
+There are includes in getTasks in taskController.ts
+           
+            include:{
+                author: true,
+                assignee: true,
+                comments: true,
+                attachments: true,
+            }
+
+Therefore need to create Types of them too in api.ts
+
+
 
 
 

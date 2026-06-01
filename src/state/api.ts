@@ -23,6 +23,23 @@ export enum Status {
     Completed = "Completed"
 }
 
+export interface User {
+    userId?: number;
+    username: string;
+    email: string;
+    profilePictureUrl?: string;
+    cognitoId?: string;
+    teamId?: number;
+}
+
+export interface Attachment {
+    id: number;
+    fileUrl: string;
+    fileName: string;
+    taskId: number;
+    uploadedById: number;
+}
+
 export interface Task {
     id: number;
     title: string;
@@ -36,6 +53,12 @@ export interface Task {
     projectId?: number;
     authorUserId?: number;
     assignedUserId?: number;
+    
+    author?: User;
+    assignee?: User;
+    comments?: Comment[];
+    attachments?: Attachment[];
+            
 }
 
 export const api = createApi({
