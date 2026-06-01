@@ -114,6 +114,196 @@ Create SidebarLink component in Sidebar/index.tsx
 
 Add styles when Sidebar Collaped and Opened
 
+## Server Side (Backend)
+
+Create server directory 
+
+Go to the server directory
+
+npm init -y
+
+It initiates package.json inside the server directory
+
+## Installing type node dependencies
+
+npm i -D ts-node typescript @types/node
+
+npx tsc --init
+
+It Created a new tsconfig.json  
+
+Modify the .tsconfig file
+
+## Installing prisma
+
+npm i prisma @prisma/client
+
+npx prisma init
+
+It creates schema.prisma file
+
+Copy and paste seedData folder in prisma folder
+
+Create seed.ts file inside pisma folder
+
+## Prisma
+In .env
+
+DATABASE_URL="postgresql://postgres:1234@localhost:5432/projectmanagement?schema=public"
+
+To generate and connect prisma ->
+npx prisma generate 
+
+npx prisma migrate dev --name init
+
+npm run seed
+
+Cleared data from Team
+Cleared data from Project
+Cleared data from ProjectTeam
+Cleared data from User
+Cleared data from Task
+Cleared data from Attachment
+Cleared data from Comment
+Cleared data from TaskAssignment
+Seeded team with data from team.json
+Seeded project with data from project.json
+Seeded projectTeam with data from projectTeam.json
+Seeded user with data from user.json
+Seeded task with data from task.json
+Seeded attachment with data from attachment.json
+Seeded comment with data from comment.json
+Seeded taskAssignment with data from taskAssignment.json
+
+## In case of migration issue, to reset migration
+
+npm prisma migrate reset
+
+In pgAdmin -> projectmanagement -> Schemas -> Tables, there is data
+
+Now the database is connected, now we can create our backend api using nodejs
+
+## Installing packages for the backend
+
+npm i express body-parser cors dotenv helmet morgan
+
+express -> as server
+body-parser -> to pass the requests
+cors -> for cross origin issues
+dotenv -> to manage env variables
+helmet -> for sequire
+morgan -> for API request login
+
+## Installing typescript packages to run the application securely on node server
+
+npm i -D rimraf concurrently nodemon @types/cors @types/express @types/morgan @types/node
+
+Create src directory in server directory
+Create index.ts file inside src directory
+
+Run the backend server
+npm run dev
+
+Open a new terminal 
+curl localhost:8000
+It prints "This is a home route"
+
+Create controllers directory inside src directory
+Create projectController.ts file inside controllers directory
+
+Create routes directory inside src directory
+
+Create projectRoutes.ts file inside routes directory
+
+Add this line inside projectRoutes.ts fils
+router.get("/", getProjects);
+
+Add this line inside index.tsx
+'app.use("/projects", projectRoutes);'
+
+curl http://localhost:8000/projects
+
+It prints the project list
+
+In ProjectController create createProject
+
+Add this line inside projectRoutes.ts fils
+router.post("/", createProject);
+
+The error message is not descriptive:
+
+export const createProject = async (
+    req: Request,
+     res: Response
+): Promise<void> => {
+    const { name, description, startDate, endDate } = req.body;
+    try {
+        const newProject = await prisma.project.create({
+            data: {
+                name,
+                description,
+                startDate,
+                endDate
+            }
+        });
+        res.status(201).json(newProject);
+    } catch (error) {
+        res.status(500).json({ message: "Error creating project" });
+    }
+}
+
+To make it decriptive change this line:
+
+   catch (error) {
+        res.status(500).json({ message: "Error creating project" });
+    }
+
+    to that
+
+    catch (error: any) {
+        res.status(500).json({ message: `Error creating project: ${error.message}` });
+    }
+
+
+command for resetting id in database: 
+`SELECT setval(pg_get_serial_sequence('"[DATA_MODEL_NAME_HERE]"', 'id'), coalesce(max(id)+1, 1), false) FROM "[DATA_MODEL_NAME_HERE]";`
+
+In PgAdmin
+On query Tool:
+SELECT setval(pg_get_serial_sequence('"Project"', 'id'), coalesce(max(id)+1, 1), false) FROM "Project";
+
+Then execute
+
+In Postman application, POST teh request to create the new project
+It gives the autoIncrementId and Post the new project without any error.
+
+
+## Tasks
+
+Inside controllers directory, create taskController.ts file
+
+Create taskRoutes.ts file inside routes directory
+
+Add this line inside index.ts
+app.use("/tasks", taskRoutes);
+
+curl http://localhost:8000/tasks?projectId=1
+
+## Project Frontend
+
+Go to src/state/api.ts file
+Create interface Project as in projectController.ts in backend
+Create interface Task as in taskController.ts in backend
+
+Create enum Status and enum Priority
+
+
+
+
+
+
+
+
 
 
 
