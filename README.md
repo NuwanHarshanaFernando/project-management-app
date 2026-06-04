@@ -325,6 +325,10 @@ Set projects list in sidebar
 Create Header directory in components directory
 Create index.tsx file inside Header directory
 
+Create BoardView directory inside projects directory
+Inside it, create index.tsx file
+
+
 
 
 
