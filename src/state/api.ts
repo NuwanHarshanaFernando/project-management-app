@@ -95,6 +95,16 @@ export const api = createApi({
             }),
             invalidatesTags: ["Tasks"],
         }),
+        updateTaskStatus: build.mutation<Task, { taskId: number; status: string }>({
+            query: ({ taskId, status }) => ({
+                url: `tasks/${taskId}/status`,
+                method: "PATCH",
+                body: { status },
+            }),
+            invalidatesTags: (result, error, { taskId }) => [
+                { type: "Tasks", id: taskId },
+            ],
+        }),
     }),
 });
 
@@ -102,5 +112,6 @@ export const {
     useGetProjectsQuery, 
     useCreateProjectMutation, 
     useGetTasksQuery, 
-    useCreateTaskMutation 
+    useCreateTaskMutation,
+    useUpdateTaskStatusMutation
 } = api;
