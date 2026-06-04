@@ -308,6 +308,26 @@ There are includes in getTasks in taskController.ts
 
 Therefore need to create Types of them too in api.ts
 
+Create endpoints in api.ts
+
+Create projects directory inside client/src/app
+Create [id] folder insdide projects directory
+Create page.tsx file inside [id] folder
+
+Move (components) directory to the src directory
+Change the name to components
+
+Create ProjectHeader.tsx file inside projects directory
+
+## Calling API end-points and get data
+Set projects list in sidebar
+
+Create Header directory in components directory
+Create index.tsx file inside Header directory
+
+
+
+
 
 
 
