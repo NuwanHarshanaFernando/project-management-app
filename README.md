@@ -336,6 +336,12 @@ Create another active tab for ListView inside page.tsx
 
 Create TaskCard component
 
+## Timeline
+Create TimelineView directory inside projects directory
+Create index.tsx file inside TimelineView directory
+
+Create another active tab for TimelineView inside page.tsx
+
 
 
 
