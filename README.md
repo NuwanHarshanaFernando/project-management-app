@@ -342,6 +342,8 @@ Create index.tsx file inside TimelineView directory
 
 Create another active tab for TimelineView inside page.tsx
 
+Add class to the global.css
+
 
 
 
