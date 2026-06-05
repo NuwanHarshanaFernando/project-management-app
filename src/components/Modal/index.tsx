@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react';
+import ReactDOM from 'react-dom';
 import Header from '../Header';
 import { X } from 'lucide-react';
 
@@ -39,4 +39,4 @@ const Modal = ({
   );
 };
 
-export default Modal
+export default Modal;
