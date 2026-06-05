@@ -328,6 +328,13 @@ Create index.tsx file inside Header directory
 Create BoardView directory inside projects directory
 Inside it, create index.tsx file
 
+## Grid view
+Create ListView directory inside projects directory
+Create index.tsx file inside ListView directory
+
+Create another active tab for ListView inside page.tsx
+
+Create TaskCard component
 
 
 
