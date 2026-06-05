@@ -336,13 +336,26 @@ Create another active tab for ListView inside page.tsx
 
 Create TaskCard component
 
-## Timeline
+## Timeline View
 Create TimelineView directory inside projects directory
 Create index.tsx file inside TimelineView directory
 
 Create another active tab for TimelineView inside page.tsx
 
 Add class to the global.css
+
+## Table View
+Create another active tab for Table View inside page.tsx
+
+Create TableView directory inside projects directory
+Create index.tsx file inside TableView directory
+
+Create lib folder inside src directory
+Create utils.ts file inside lib folder
+
+Define datagridClassNames in utils.ts file
+
+
 
 
 

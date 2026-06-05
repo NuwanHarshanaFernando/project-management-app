@@ -1,7 +1,7 @@
 import { useAppSelector } from '@/app/redux';
 import { useGetTasksQuery } from '@/state/api';
 import { DisplayOption, Gantt, ViewMode } from 'gantt-task-react';
-import "gantt-task-react/dist/index";
+import "gantt-task-react/dist/index.css";
 import React, { useMemo, useState } from 'react'
 
 type Props = {
@@ -48,7 +48,7 @@ const Timeline = ({ id, setIsModalNewTaskOpen }: Props) => {
     }
 
     if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error occurred while fetching tasks</div>;
+    if (error || !tasks) return <div>Error occurred while fetching tasks</div>;
 
 
     return (
