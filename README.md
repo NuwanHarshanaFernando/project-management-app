@@ -355,6 +355,17 @@ Create utils.ts file inside lib folder
 
 Define datagridClassNames in utils.ts file
 
+## Projects Frontend Modals
+Create Modal in ProjectHeader.tsx
+Create Modal Component inside components directory
+
+Create ModalNewProject directory inside projects directory
+Inside it, create index.tsx
+
+
+
+
+
 
 
 
