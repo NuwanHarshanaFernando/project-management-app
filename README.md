@@ -362,8 +362,13 @@ Create Modal Component inside components directory
 Create ModalNewProject directory inside projects directory
 Inside it, create index.tsx
 
+In page.tsx, use ModalNewTask
 
+In ListView Header add a buttonComponent
 
+Add buttonComponent in the TableView Header
+
+Create ModalNewTask in components directory
 
 
 
