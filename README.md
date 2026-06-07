@@ -370,6 +370,12 @@ Add buttonComponent in the TableView Header
 
 Create ModalNewTask in components directory
 
+## Timeline
+
+Create timeline folder inside src/app
+Create page.tsx inside timeline directory
+Copy from TimeLineView and paste
+Add "use client" because it's not a child of a client component
 
 
 
