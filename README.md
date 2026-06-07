@@ -377,6 +377,19 @@ Create page.tsx inside timeline directory
 Copy from TimeLineView and paste
 Add "use client" because it's not a child of a client component
 
+## Search
+In ServerSide, create searchController.ts in src/controllers directory
+Create searchRoutes.ts in sec/routes
+
+In index.ts, add this line
+
+app.use("/search", searchRoutes);
+
+## Frontend
+Create API request for search in api.ts
+Create interface SearchResults 
+
+
 
 
 
