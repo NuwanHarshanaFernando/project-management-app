@@ -389,7 +389,13 @@ app.use("/search", searchRoutes);
 Create API request for search in api.ts
 Create interface SearchResults 
 
+Create search folder inside app directory.
+Inside search folder, create page.tsx
 
+Add "use client";
+
+Install lodash for debounce
+ npm i lodash
 
 
 
