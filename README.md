@@ -444,6 +444,38 @@ router.get("/user/:userId", getUserTasks);
 
 Create API endpoint in client/src/state/api.ts
 
+Create priority folder inside client/src/app directory
+Inside priority folder create reusablePriorityPage folder
+Create index.tsx inside that folder.
+
+Add "use client" because there is a Table
+
+Update the Props of ModalNewTask:
+
+type Props = {
+    isOpen: boolean;
+    onClose: () => void;
+    id: string;
+}
+
+to 
+
+type Props = {
+    isOpen: boolean;
+    onClose: () => void;
+    id?: string | null;
+}
+
+set default id to null 
+const ModalNewTask = ({isOpen, onClose, id = null}: Props) => {}
+
+Validation:
+
+if (!title || !authorUserId) return;
+
+to 
+
+if (!title || !authorUserId || !(id !== null || projectId)) return;
 
 
 
