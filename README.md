@@ -410,7 +410,14 @@ Create userRoutes.ts inside routes directory
 In index.ts add this line
     app.use("/users", userRoutes);
 
-Create endpoint getUsers in client/src/state/api.ts     
+Create endpoint getUsers in client/src/state/api.ts 
+
+Create users folder inside src/app directory
+Create page.tsx inside users directory
+Add "use client" because there is material ui data grid
+
+
+
 
 
 
