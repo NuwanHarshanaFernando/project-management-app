@@ -435,6 +435,22 @@ Add "use client"
 
 Add HomePage in app / page.tsx
 
+## Priority
+
+In backend, taskController, create getUserTasks to get Tasks specific to user
+Add a router inside taskRoutes.ts
+
+router.get("/user/:userId", getUserTasks);
+
+Create API endpoint in client/src/state/api.ts
+
+
+
+
+
+
+
+
 
 
 
