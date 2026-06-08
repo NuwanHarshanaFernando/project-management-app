@@ -400,6 +400,10 @@ Install lodash for debounce
 Create ProjectCard Component in components directory
 Create UserCard Component in components directory
 
+## Settings
+Create settings folder inside src/app directory
+Create page.tsx file inside settings folder
+
 
 
 
