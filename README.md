@@ -424,6 +424,9 @@ app.use("/teams", teamRoutes);
 
 Create endpoint getTeams in client/src/state/api.ts 
 
+Create teams folder inside src/ápp directory
+Create page.tsx inside teams directory
+
 
 
 
