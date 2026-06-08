@@ -397,6 +397,10 @@ Add "use client";
 Install lodash for debounce
  npm i lodash
 
+Create ProjectCard Component in components directory
+Create UserCard Component in components directory
+
+
 
 
 
