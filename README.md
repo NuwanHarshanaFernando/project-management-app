@@ -404,6 +404,13 @@ Create UserCard Component in components directory
 Create settings folder inside src/app directory
 Create page.tsx file inside settings folder
 
+## Users 
+Backend, in server/src/controllers, create userController.ts
+Create userRoutes.ts inside routes directory
+In index.ts add this line
+    app.use("/users", userRoutes);
+
+Create endpoint getUsers in client/src/state/api.ts     
 
 
 
