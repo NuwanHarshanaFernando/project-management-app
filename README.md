@@ -427,6 +427,14 @@ Create endpoint getTeams in client/src/state/api.ts
 Create teams folder inside src/ápp directory
 Create page.tsx inside teams directory
 
+## Home 
+Create home directory inside src/app
+Create page.tsx inside home directory
+
+Add "use client"
+
+Add HomePage in app / page.tsx
+
 
 
 
