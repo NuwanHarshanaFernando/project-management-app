@@ -416,6 +416,13 @@ Create users folder inside src/app directory
 Create page.tsx inside users directory
 Add "use client" because there is material ui data grid
 
+## Teams
+Backend, in server/src/controllers, create teamController.ts
+Create teamRoutes.ts inside routes directory
+In index.ts add this line
+app.use("/teams", teamRoutes);
+
+Create endpoint getTeams in client/src/state/api.ts 
 
 
 
