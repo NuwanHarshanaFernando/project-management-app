@@ -477,6 +477,11 @@ to
 
 if (!title || !authorUserId || !(id !== null || projectId)) return;
 
+Create urgent directory inside priority folder
+Create page.tsx inside urgent directory
+
+Create high, medium, low, backlog folders inside priority folder
+Create page.tsx files inside these folders
 
 
 
